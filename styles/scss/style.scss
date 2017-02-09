@@ -1,0 +1,449 @@
+
+@import '../scss/general';
+@import '../scss/header';
+@import '../scss/footer';
+@import '../scss/for-slider';
+
+
+//ADVERTISE
+.advertise {
+	padding: 15px;
+	background: $color-bg;
+
+	@media screen and (max-width: 640px) {
+    	display: none;
+    }
+}
+
+.delivery {
+	padding-left: 65px;
+	background-image: url("../../images/layout-sprite.png");
+	background-position: 0 0;
+	background-repeat: no-repeat;
+	background-size: 750px;
+}
+
+.lenses {
+	@extend .delivery;
+	background-position: 0 -45px;
+
+	@media screen and (max-width: 1024px) {
+		display: none;
+	}
+}
+
+.rating {
+	@extend .delivery;
+	padding-left: 85px;
+	background-position: 0 -86px;
+}
+
+.advertise-link {
+	font-size: 12px;
+	font-weight: bold;
+	color: black;
+	text-decoration: none;
+	line-height: 2;
+
+	&:hover {
+		color: $color-link;
+	}
+}
+
+.advertise-text {
+	font-size: 12px;
+}
+// end of ADVERTISE
+
+//NEWLOOK
+.new-look {
+	height: 500px;
+	background: url("../../images/bg-1.jpg") center center no-repeat;
+	
+	@media screen and (max-width: 640px) {
+		height: 465px;
+		background: url("../../images/bg-2.jpg") center center no-repeat;
+	}
+}
+
+.new-look-buttons {
+	position: relative;
+	top: 400px;
+	text-align: center;
+
+	@media screen and (max-width: 640px) {
+		top: 325px;
+	}
+
+	@media screen and (max-width: 480px) {
+		top: 210px;
+	}
+}
+
+.link-button {
+	@extend .button;
+	margin: 0 10px;
+	color: #c00;
+    border: 1px solid #c00;
+    font-weight: bold;
+    background-color: #f6f6f6;
+
+	&:hover {
+		@extend .button;
+		padding: 12px 16px;
+		border: 1px solid $color-button;
+	    background-color: #fff;
+	    color: $color-button;
+	}
+	
+	@media screen and (max-width: 480px) {
+		margin-bottom: 10px;
+	}
+}
+// end of NEWLOOK
+
+//TRUSTPANEL
+.trustpanel {
+	background: $color-bg;
+}
+
+.trustpanel-heading {
+	text-align: center;
+	font-size: 20px;
+	font-weight: bold;
+
+	@media screen and (max-width: 640px) {
+		display: none;
+	}
+}
+// end of TRUSTPANEL
+
+//FLASHSALE
+.flashsale {
+	background: #48647c;
+	color: white;
+}
+
+.flashsale-block {
+	text-align: right;
+
+	p {
+		padding-right: 25px;
+	}
+}
+
+.flashsale-heading {
+	margin: 7px 0;
+	font-size: 26px;
+	text-transform: uppercase;
+
+	span {
+		color: $color-button;
+	}
+}
+
+.flashsale-button {
+	display: inline-block;
+	padding: 10px 15px;
+	margin-top: 7px;
+	font-size: 16px;
+	font-weight: bold;
+	border: 2px solid $color-button;
+	color: white;
+	text-decoration: none;
+
+	&:hover {
+		color: white;
+		box-shadow: 1px 2px 2px grey;
+	}
+
+	span {
+		color: $color-button;
+	}
+}
+//end of FLASHSALE
+
+//DESIGNER
+.designer {
+	padding-bottom: 40px;
+}
+
+.designer-text {
+	text-align: center;
+	line-height: 1.5;
+
+	span {
+		text-transform: uppercase;
+		font-weight: bold;
+		color: #ad1100;;
+	}
+}
+
+.designer-buttons {
+	text-align: center;
+	padding: 25px 0;
+}
+
+.designer-button {
+	@extend .button;
+	padding: 11px 30px;
+	margin: 0 3px;
+
+	@media screen and (max-width: 1024px) {
+		padding: 11px 15px;
+	}
+
+	@media screen and (max-width: 768px) {
+		width: 130px;
+		margin-bottom: 5px;
+	}
+
+	&:hover {
+		padding: 10px 29px;
+
+		@media screen and (max-width: 1024px) {
+			padding: 10px 15px;
+		}
+
+		@media screen and (max-width: 768px) {
+			width: 130px;
+			margin-bottom: 5px;
+		}
+	}
+}
+//end of DESIGNER
+
+//CATALOGUE
+.catalogue-wrap {
+	padding: 40px 0;
+	border-top: 1px solid #e2e6e7;
+	text-align: center;
+
+	@media screen and (max-width: 640px) {
+    	padding-top: 0;
+    }
+}	
+
+.catalogue-text {
+	margin-top: -15px;
+	text-align: center;
+}	
+
+.row-catalogue {
+	@media screen and (max-width: 640px) {
+    	padding: 0;
+    }
+
+	div {
+		padding-bottom: 25px;
+		padding-top: 5px;
+	}
+}
+
+.gatalogue-heading {
+	@extend .trustpanel-heading;
+}
+
+.catalogue-text {
+	padding-bottom: 20px;
+	line-height: 1.5;
+}
+
+.catalogue-button {
+	@extend .designer-button;
+}
+// end of CATALOGUE
+
+//REASONS
+.reasons {
+	padding: 40px 0;
+	background: #f7f5f6;
+    border-top: 1px solid #e2e6e7;
+
+    p {
+    	line-height: 1.5;
+    }
+}
+
+.reasons-heading {
+	font-size: 24px;
+	font-weight: bold;
+}
+
+.reasons-text {
+	font-size: 18px;
+	font-weight: bold;
+}
+
+.reasons-list {
+	margin-left: 20px;
+	padding: 30px 0 15px;
+	list-style-type: disc;
+	list-style-position: outside;
+}
+
+.reasons-item {
+	line-height: 1.6;
+} 
+
+.reasons-review {
+	padding-top: 15px;
+	font-style: italic;
+}
+
+.reasons-link-block {
+	display: block;
+	text-align: center;
+	text-decoration: none;
+	color: black;
+
+	&:hover {
+		color: inherit;
+	}
+}
+
+.reasons-logo {
+	font-size: 24px;
+	text-transform: uppercase;
+
+	&:before {
+		content: "";
+		display: inline-block;
+		width: 19px;
+		height: 19px;
+		padding-right: 5px;
+		background: url("../../images/mark.png") center no-repeat;
+	}
+
+	span {
+		color: #929497;
+	}
+}
+
+.stars-item {
+	display: inline-block;
+	padding: 5px;
+	margin-right: -2px;
+	font-size: 22px;
+	border-radius: 4px;
+	color: white;
+	background: #007F4E;
+}
+
+.reasons-score {
+	margin: 20px 0 5px;
+	color: #aaa;
+    font-size: 11px;
+
+    span {
+    	display: inline-block;
+    	padding-right: 15px;
+    	text-transform: uppercase;
+
+    	&:last-child {
+    		padding-right: 0;
+    		padding-left: 15px;
+    		border-left: 1px solid #bbb;
+    	}
+    }
+}
+
+.reasons-score-text {
+	@extend .reasons-score;
+	margin-top: 5px;
+}
+
+.reason-slider {
+	margin: 15px 0;
+    padding: 23px 0;
+	border-top: 1px solid #eee;
+}
+
+.slider-text {
+	margin-bottom: 10px;
+	font-size: 13px;
+	white-space: nowrap;
+	overflow: hidden;
+	text-overflow: ellipsis;
+
+	&:first-child {
+		font-size: 10px;
+		color: #aaa;
+	}
+
+	&:nth-child(2) {
+		font-size: 16px;
+		font-weight: bold;
+	}
+}
+
+.reasons-socials {
+	margin-top: 70px;
+
+	@media screen and (max-width: 1024px) {
+		text-align: center;
+	}
+}
+
+.reasons-button {
+	display: inline-block;
+	width: 32px;
+	height: 32px;
+	text-align: center;
+	vertical-align: top;
+	text-decoration: none;
+	font-size: 26px;
+	line-height: 32px;
+	color: white;
+	background-color: rgb(59, 89, 152);
+
+	transition: all .2s ease-in-out;
+
+	&:hover {
+		transform: translateY(-4px);
+		color: white;
+	}
+}
+
+.button-twit {
+	background-color: rgb(29, 161, 242);
+}
+
+.button-google {
+	font-size: 18px;
+	background-color: rgb(220, 78, 65);
+}
+
+.button-plus {
+	position: relative;
+	font-size: 18px;
+	background-color: rgb(255, 101, 80);
+
+	&:hover {
+		transform: none;
+	}
+}
+
+.reasons-span {
+	display: inline-block;
+	width: 32px;
+	height: 32px;
+	text-align: center;
+	line-height: 32px;
+    font-size: 11.4px;
+    background: #ebebeb;
+    cursor: pointer;
+}
+// end of REASONS
+
+
+
+
+
+
+
+
+
+
+
+
